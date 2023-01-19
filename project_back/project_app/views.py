@@ -70,7 +70,7 @@ def items(request):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def item(request, id):
-    pass
+    return sendhome()
 
 api_view(['GET'])
 def cart(request):

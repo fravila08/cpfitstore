@@ -20,6 +20,7 @@ function MyNavBar() {
           <Nav className="me-auto">
             <Nav.Link href="/signup/">Sign Up</Nav.Link>
             <Nav.Link href="/signin/">Sign In</Nav.Link>
+            <Nav.Link href='/allitems/'>All Items</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="/allitems/">All Items</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

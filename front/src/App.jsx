@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useParams} from 'react-router-dom';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
@@ -10,6 +10,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import MyNavBar from './components/nav';
 import AllItems from './pages/AllItems';
+import IndivItem from './pages/IndivItem';
 
 function App() {
   const [user,setUser]=useState(null)
@@ -37,6 +38,7 @@ function App() {
           <Route path='signup/' element={<SignUp/>} />
           <Route path='signin/' element={<SignIn/>} />
           <Route path='allitems/' element={<AllItems/>}/>
+          <Route path='item/:id/' element={<IndivItem />}/>
         </Routes>
       </Router>
     </div>

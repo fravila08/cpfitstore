@@ -7,7 +7,7 @@ function ItemDisplay({item}) {
       <Card.Img variant="top" src={item.image} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
-        <Button variant="primary">See Full Details</Button>
+        <Button onClick={()=>window.location.href=`/item/${item.id}/`} variant="primary">See Full Details</Button>
       </Card.Body>
     </Card>
   );
