@@ -7,7 +7,7 @@ function ItemDisplay({item}) {
       <Card.Img variant="top" src={item.image} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">See Full Details</Button>
       </Card.Body>
     </Card>
   );

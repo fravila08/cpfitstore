@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import axios from "axios"
 import { useState } from "react"
 import ItemDisplay from "../components/ItemDisplay"
+import Spinner from 'react-bootstrap/Spinner'
 
 const AllItems = () =>{
     const [items, setItems]=useState([])
@@ -17,9 +18,13 @@ const AllItems = () =>{
     return(
         <div>
             <h3 style={{color:"black", border:"solid black 2px"}}>All Item</h3>
-            {items.map((item)=>(
-                <ItemDisplay item={item}/>
-            ))}
+            {items.length < 1 ? 
+                <Spinner animation="grow" variant="info" size="lg"/> 
+            :
+                items.map((item)=>(
+                    <ItemDisplay item={item}/>
+                ))
+            }
         </div>
     )
 }
