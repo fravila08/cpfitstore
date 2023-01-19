@@ -66,7 +66,7 @@ def curr_user(request):
 
 @api_view(['GET'])
 def items(request):
-    pass
+    return sendhome()
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def item(request, id):

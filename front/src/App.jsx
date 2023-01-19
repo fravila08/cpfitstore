@@ -9,6 +9,7 @@ import CsrfToken from './components/CsrfToken';
 import axios from 'axios';
 import { useEffect } from 'react';
 import MyNavBar from './components/nav';
+import AllItems from './pages/AllItems';
 
 function App() {
   const [user,setUser]=useState(null)
@@ -19,7 +20,7 @@ function App() {
     const user = response.data && response.data[0] && response.data[0].fields
     setUser(user)
   }
-
+  
   useEffect(()=>{
     curr_user()
   },[])
@@ -35,6 +36,7 @@ function App() {
           <Route path='' element={<Home/>} />
           <Route path='signup/' element={<SignUp/>} />
           <Route path='signin/' element={<SignIn/>} />
+          <Route path='allitems/' element={<AllItems/>}/>
         </Routes>
       </Router>
     </div>
